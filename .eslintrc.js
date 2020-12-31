@@ -18,8 +18,21 @@ module.exports = {
   },
   plugins: [
     'react',
-    '@typescript-eslint'
+    '@typescript-eslint',
+    'simple-import-sort',
+    'sort-destructure-keys',
+    'sort-keys-fix'
   ],
   rules: {
+    '@typescript-eslint/no-use-before-define': ['error'],
+    camelcase: 'off',
+    'no-explicit-any': 'off',
+    'no-use-before-define': 'off',
+    'react/display-name': 'off',
+    semi: ['error', 'always'],
+    'simple-import-sort/sort': 'error',
+    'sort-destructure-keys/sort-destructure-keys': [2, { caseSensitive: false }],
+    'sort-keys': ['error', 'asc', { caseSensitive: true, minKeys: 2, natural: false }],
+    'sort-keys-fix/sort-keys-fix': 'warn'
   }
-}
+};
